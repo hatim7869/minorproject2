@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#part1 {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(248, 227, 234);
+}
+
+.par1 {
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(248, 227, 234);
+}
+
+.rightelem {
+    z-index: 9999;
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(29, 83%, 82%);
+    animation: hatim 2s cubic-bezier(0.19, 1, 0.22, 1) reverse both;
+}
+
+.leftelem {
+    z-index: 9999;
+    position: absolute;
+    bottom: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(29, 83%, 82%);
+    animation: hatim 2s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+.toptxt h5 {
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 25px;
+}
+
+.toptxt {
+    animation: dada 4s cubic-bezier(0.19, 1, 0.22, 1) 1.5s both;
+    position: absolute;
+    left: 5%;
+    top: 3%;
+    z-index: 99;
+    font-size: 55px;
+    font-weight: 100;
+    line-height: 57px;
+    font-family: voyage;
+}
+
+#rtoptext h3 {
+    animation: dadg 4s cubic-bezier(0.19, 1, 0.22, 1) 1.5s both;
+    position: absolute;
+    left: 22%;
+    top: 0%;
+    font-size: 100px;
+    z-index: 111;
+    font-size: 170px;
+    font-weight: 100;
+    font-family: 'Cormorant SC', serif;
+}
+
+.btmtxt {
+    padding-top: 10px;
+    font-size: 11px;
+    width: 60%;
+    animation: dada 4s cubic-bezier(0.19, 1, 0.22, 1) 1.5s both;
+}
+
+#part2 .btmtxt {
+    margin-left: 130px;
+    padding-bottom: 10px;
+    font-size: 11px;
+    width: 60%;
+    animation: dada 4s cubic-bezier(0.19, 1, 0.22, 1) 1.5s both;
+}
+
+#num {
+    animation: dadi 4s cubic-bezier(0.19, 1, 0.22, 1) 1.5s both;
+    position: absolute;
+    bottom: 22%;
+    right: 12%;
+    transform: translate(-50%, 50%);
+    z-index: 111;
+    font-size: 170px;
+    font-weight: 100;
+    font-family: 'Cormorant SC', serif;
+}
+
+#part2 #num2 {
+    animation: dadi 4s cubic-bezier(0.19, 1, 0.22, 1) 1.5s both;
+    position: absolute;
+    bottom: 12%;
+    right: 4%;
+    transform: translate(-50%, 50%);
+    z-index: 111;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Cormorant SC', serif;
+    /* transform-origin: 100% 50%; */
+    /* background-color: red; */
+    transform: rotate(90deg);
+}
+
+#part2 {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(235, 199, 205);
+}
+
+.picture {
+    height: 50%;
+    width: 38%;
+}
+
+.center {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+#rcenter {
+    background-image: url(https://images.unsplash.com/photo-1498843053639-170ff2122f35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+}
+
+#lcenter {
+    background-image: url(https://images.unsplash.com/photo-1532490389938-2856e3f1560a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80);
+}
+
+.elem {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(248, 227, 234);
+}
+
+#lelem {
+    animation: hatim 2s cubic-bezier(0.19, 1, 0.22, 1) 2s infinite both;
+}
+
+#relem {
+    animation: hatim 2s cubic-bezier(0.19, 1, 0.22, 1) 2s infinite reverse both;
+}
+
+@keyframes hatim {
+    0% {
+        top: 100%;
+        height: 100%;
+    }
+
+    50% {
+        top: 0%;
+        height: 100%;
+    }
+
+    100% {
+        top: 0%;
+        height: 0%;
+    }
+}
+
+@keyframes dada {
+    from {
+        left: 0%;
+        opacity: 0;
+    }
+
+    to {
+        left: 5%;
+        opacity: 1;
+    }
+}
+
+@keyframes dadi {
+    from {
+        right: 5%;
+        opacity: 0;
+    }
+
+    to {
+        right: 12%;
+        opacity: 1;
+    }
+}
+
+@keyframes dadg {
+    from {
+        left: 0%;
+        opacity: 0;
+    }
+
+    to {
+        left: 22%;
+        opacity: 1;
+    }
+}
